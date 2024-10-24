@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1 class="tit">VARDHAMAN COLLEGE CANTEEN</h1>
+    <h1>Place Your Order</h1>
+    <form method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="food_item">Food Item:</label><br>
+        <input type="text" id="food_item" name="food_item"><br>
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address"><br><br>
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

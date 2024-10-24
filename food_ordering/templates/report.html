@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items Sold Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Items Sold Report</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Restaurant</th>
+                <th>Items Sold</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in sold_items %}
+            <tr>
+                <td>{{ item.restaurant }}</td>
+                <td>{{ item.total_quantity }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

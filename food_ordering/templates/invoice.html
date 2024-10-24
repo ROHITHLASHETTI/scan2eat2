@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="invoice">
+        <h1>Invoice</h1>
+        <p>Order ID: {{ order.id }}</p>
+        <p>Name: {{ order.name }}</p>
+        <p>Food Item: {{ order.food_item }}</p>
+        <p>Address: {{ order.address }}</p>
+        <p>Price: {{ order.price }}</p>
+        <img src="{{ url_for('static', filename=qr_code_img.split('/')[-1]) }}" alt="QR Code">
+        <br>
+        <a href="{{ url_for('download_invoice', order_id=order.id) }}">Download Invoice as PDF</a>
+    </div>
+</body>
+</html>
